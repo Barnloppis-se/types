@@ -1,5 +1,5 @@
 {
-  "name": "types",
+  "name": "@barnloppis/types",
   "version": "1.0.0",
   "description": "Barnloppis.se API object types",
   "type": "module",
