@@ -2,11 +2,9 @@
   "name": "types",
   "version": "1.0.0",
   "description": "Barnloppis.se API object types",
-
   "type": "module",
-  "module": "index.ts",
+  "module": "@types.ts",
   "license": "MIT",
-
   "devDependencies": {
     "@types/bun": "latest"
   },
