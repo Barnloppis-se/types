@@ -69,5 +69,5 @@ export type Image = {
     /**
      * Image data
      */
-    image: Blob
+    image: ReadableStream
 }
