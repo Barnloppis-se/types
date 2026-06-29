@@ -49,14 +49,25 @@ export type Item = {
      * misses a seller.
      */
     seller?: number,
+}
+
+/**
+ * Image upload data
+ *
+ * This is used to upload an
+ * image to the server backend.
+ *
+ * Each image belongs to an item
+ * specified by the `item` property.
+ */
+export type Image = {
+    /**
+     * Item ID
+     */
+    item: string
 
     /**
-     * Images of the item
-     *
-     * A list of images taken of
-     * the item. This may be more
-     * than one but should not be
-     * less than one.
+     * Image data
      */
-    images: string[]
+    image: string
 }
