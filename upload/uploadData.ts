@@ -50,24 +50,3 @@ export type Item = {
      */
     seller?: number,
 }
-
-/**
- * Image upload data
- *
- * This is used to upload an
- * image to the server backend.
- *
- * Each image belongs to an item
- * specified by the `item` property.
- */
-export type Image = {
-    /**
-     * Item ID
-     */
-    item: string
-
-    /**
-     * Image data
-     */
-    image: ReadableStream
-}
