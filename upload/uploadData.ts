@@ -58,5 +58,5 @@ export type Item = {
      * than one but should not be
      * less than one.
      */
-    images: Blob[]
+    images: string[]
 }
