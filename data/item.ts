@@ -1,4 +1,3 @@
-import type { UUID } from "crypto"
 import type { Item, TAGS } from "../upload/uploadData"
 
 /**
@@ -13,7 +12,7 @@ export type ItemObject = {
     /**
      * Item ID
      */
-    id: UUID,
+    id: string,
 
     /**
      * Item creation date
