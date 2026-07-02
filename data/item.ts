@@ -46,6 +46,10 @@ export type ItemObject = {
      * the item. This may be more
      * than one but should not be
      * less than one.
+     *
+     * The images are stored with
+     * there index pointing to the
+     * right image.
      */
-    images: string[]
+    images: number[]
 }
