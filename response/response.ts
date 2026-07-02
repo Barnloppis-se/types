@@ -35,6 +35,17 @@ export interface Response {
 
 
 /**
+ * Barnloppis API error response
+ */
+export interface Error extends Response {
+    status: false
+    cause: string
+    message: string
+}
+
+
+
+/**
  * Barnloppis API item response
  */
 export interface ItemResponse extends Response {
@@ -45,4 +56,21 @@ export interface ItemResponse extends Response {
      * this value is the ID of the item.
      */
     item?: string
+}
+
+
+
+/**
+ * Barnloppis API image response
+ */
+export interface ImageResponse extends Response {
+    status: true
+
+    /**
+     * Image index
+     *
+     * The index of the uploaded
+     * image in the item image list.
+     */
+    index: number
 }
