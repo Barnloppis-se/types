@@ -1,3 +1,5 @@
+import type { ItemObject } from "../data/item"
+
 /**
  * Barnloppis backend response type
  */
@@ -56,6 +58,29 @@ export interface ItemResponse extends Response {
      * this value is the ID of the item.
      */
     item: string
+}
+
+
+
+export interface ItemListResponse extends Response {
+    status: true
+
+    /**
+     * Item list response data
+     */
+    data: {
+        /**
+         * Amount of items available
+         *
+         * If `*` was used in the request
+         * then this is the amount of items
+         * in the database.
+         *
+         * If `*`
+         */
+        size: number,
+        items: ItemObject[]
+    }
 }
 
 

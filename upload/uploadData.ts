@@ -28,6 +28,13 @@ export const tags = Object.keys(TAGS).filter(value => isNaN(Number(value)))
 
 
 /**
+ * Database search type
+ */
+export type DBSearch = "date" | "oldest" | "seller" | keyof typeof TAGS
+
+
+
+/**
  * Item type
  *
  * This represents the type used to describe
