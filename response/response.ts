@@ -62,6 +62,14 @@ export interface ItemResponse extends Response {
 
 
 
+/**
+ * Barnloppis API item list response
+ *
+ * This is used when a list of items
+ * is the result. Such as searching
+ * in the database after one or more
+ * items.
+ */
 export interface ItemListResponse extends Response {
     status: true
 
@@ -74,11 +82,30 @@ export interface ItemListResponse extends Response {
          *
          * If `*` was used in the request
          * then this is the amount of items
-         * in the database.
+         * in the category database.
+         * Otherwise it is the size of the
+         * database.
          *
-         * If `*`
+         * #### Example
+         * If items was `*` and sort `date`
+         * then this is the amount of items
+         * in the category date.
+         * However if items was `id1,id2,id3`
+         * then this is the size of the hole
+         * database - the amount of items.
+         *
+         * It is also possible to get the
+         * amount of items by specifying
+         * a sorting method that applies
+         * to the hole database such as
+         * sorting after item upload `date`
          */
         size: number,
+
+        /**
+         * List of items included in the
+         * search result.
+         */
         items: ItemObject[]
     }
 }
