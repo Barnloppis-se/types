@@ -10,6 +10,15 @@ export interface Response {
      * error from the server
      */
     status: boolean
+}
+
+
+
+/**
+ * Barnloppis API error response
+ */
+export interface Error extends Response {
+    status: false
 
     /**
      * Error cause
@@ -20,7 +29,7 @@ export interface Response {
      * error cause message - the source of the
      * error from the server.
      */
-    cause?: string
+    cause: string
 
     /**
      * Error message
@@ -29,17 +38,6 @@ export interface Response {
      * same logic for when the message
      * is `undefined` and not.
      */
-    message?: string
-}
-
-
-
-/**
- * Barnloppis API error response
- */
-export interface Error extends Response {
-    status: false
-    cause: string
     message: string
 }
 
@@ -49,13 +47,15 @@ export interface Error extends Response {
  * Barnloppis API item response
  */
 export interface ItemResponse extends Response {
+    status: true
+
     /**
      * Item ID
      *
      * If the server responded without any errors
      * this value is the ID of the item.
      */
-    item?: string
+    item: string
 }
 
 
